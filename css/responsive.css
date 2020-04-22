@@ -9,11 +9,10 @@
     }
 
     nav#scrollEffectNavbar {
-        padding: 0px;
+        padding: 25px;
     }
 
     a.navbar-brand {
         margin-right: 0px;
     }
-
 }

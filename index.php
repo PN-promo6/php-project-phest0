@@ -15,7 +15,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark white scrolling-navbar" id="scrollEffectNavbar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar" id="scrollEffectNavbar">
         <div class="container-fluid">
 
             <!-- Brand -->
@@ -44,13 +44,19 @@
                 </ul>
 
                 <!-- Right -->
-                <ul class="navbar-nav nav-flex-icons">
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-outline-light mr-3">S'inscrire</button>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-success">Se connecter</button>
-                    </li>
+                <ul class="navbar-nav nav-flex-icons row">
+
+                    <div class="">
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-outline-dark mr-3">S'inscrire</button>
+                        </li>
+                    </div>
+                    <div class="">
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-success">Se connecter</button>
+                        </li>
+                    </div>
+
                 </ul>
 
             </div>
@@ -58,12 +64,290 @@
         </div>
     </nav>
     <!-- Navbar -->
-    <section class="container-fluid">
-        <h1>Choisir son setup</h1>
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Choisir son setup</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 mb-5">
+                <!-- Card -->
+                <div class="card">
+
+                    <!-- Card content -->
+                    <div class="card-body d-flex flex-row">
+
+                        <!-- Avatar -->
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+
+                        <!-- Content -->
+                        <div>
+
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold mb-2">New spicy meals</h4>
+                            <div class="row">
+                                <!-- Subtitle -->
+
+                                <div class="col-7">
+                                    <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
+                                </div>
+                                <div class="col-5">
+                                    <span class="btn btn-outline-primary">1235€</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Card image -->
+                    <div class="view overlay">
+                        <img class="card-img-top rounded-0" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+            <div class="col-lg-4 mb-5">
+                <!-- Card -->
+                <div class="card">
+
+                    <!-- Card content -->
+                    <div class="card-body d-flex flex-row">
+
+                        <!-- Avatar -->
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+
+                        <!-- Content -->
+                        <div>
+
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold mb-2">New spicy meals</h4>
+                            <div class="row">
+                                <!-- Subtitle -->
+
+                                <div class="col-7">
+                                    <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
+                                </div>
+                                <div class="col-5">
+                                    <span class="btn btn-outline-primary">1235€</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Card image -->
+                    <div class="view overlay">
+                        <img class="card-img-top rounded-0" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+            <div class="col-lg-4 mb-5">
+                <!-- Card -->
+                <div class="card">
+
+                    <!-- Card content -->
+                    <div class="card-body d-flex flex-row">
+
+                        <!-- Avatar -->
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+
+                        <!-- Content -->
+                        <div>
+
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold mb-2">New spicy meals</h4>
+                            <div class="row">
+                                <!-- Subtitle -->
+
+                                <div class="col-7">
+                                    <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
+                                </div>
+                                <div class="col-5">
+                                    <span class="btn btn-outline-primary">1235€</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Card image -->
+                    <div class="view overlay">
+                        <img class="card-img-top rounded-0" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+            <div class="col-lg-4 mb-5">
+                <!-- Card -->
+                <div class="card">
+
+                    <!-- Card content -->
+                    <div class="card-body d-flex flex-row">
+
+                        <!-- Avatar -->
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+
+                        <!-- Content -->
+                        <div>
+
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold mb-2">New spicy meals</h4>
+                            <div class="row">
+                                <!-- Subtitle -->
+
+                                <div class="col-7">
+                                    <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
+                                </div>
+                                <div class="col-5">
+                                    <span class="btn btn-outline-primary">1235€</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Card image -->
+                    <div class="view overlay">
+                        <img class="card-img-top rounded-0" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+            <div class="col-lg-4 mb-5">
+                <!-- Card -->
+                <div class="card">
+
+                    <!-- Card content -->
+                    <div class="card-body d-flex flex-row">
+
+                        <!-- Avatar -->
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+
+                        <!-- Content -->
+                        <div>
+
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold mb-2">New spicy meals</h4>
+                            <div class="row">
+                                <!-- Subtitle -->
+
+                                <div class="col-7">
+                                    <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
+                                </div>
+                                <div class="col-5">
+                                    <span class="btn btn-outline-primary">1235€</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Card image -->
+                    <div class="view overlay">
+                        <img class="card-img-top rounded-0" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+            <div class="col-lg-4 mb-5">
+                <!-- Card -->
+                <div class="card">
+
+                    <!-- Card content -->
+                    <div class="card-body d-flex flex-row">
+
+                        <!-- Avatar -->
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+
+                        <!-- Content -->
+                        <div>
+
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold mb-2">New spicy meals</h4>
+                            <div class="row">
+                                <!-- Subtitle -->
+
+                                <div class="col-7">
+                                    <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
+                                </div>
+                                <div class="col-5">
+                                    <span class="btn btn-outline-primary">1235€</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Card image -->
+                    <div class="view overlay">
+                        <img class="card-img-top rounded-0" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+        </div>
+        </div>
 
     </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

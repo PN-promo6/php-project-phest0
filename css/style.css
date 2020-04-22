@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #212529;
+    background-color: #F7F7F2;
     font-family: 'RobotoMono-Regular';
 }
 
@@ -25,6 +25,7 @@ body {
 
 nav#scrollEffectNavbar {
     padding: 70px 0 20px 0;
+    background-color: #DFDEDA;
 }
 
 li.nav-item a {
@@ -35,7 +36,11 @@ a.navbar-brand {
     margin-right: 190px;
 }
 
-section.container-fluid {
+section.container {
     margin-top: 180px;
-    color: white;
+    color: #212529;
+}
+
+h1 {
+    margin-bottom: 40px;
 }
