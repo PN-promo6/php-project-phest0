@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'RobotoMono-Regular';
+    src: url("../fonts/RobotoMono-Regular.ttf");
+}
+
+body {
+    background-color: #212529;
+    font-family: 'RobotoMono-Regular';
+}
+
+#scrollEffectNavbar {
+    position: fixed;
+    /* Make it stick/fixed */
+    top: 0;
+    /* Stay on top */
+    width: 100%;
+    /* Full width */
+    transition: top 0.3s;
+    /* Transition effect when sliding down (and up) */
+}
+
+.container-fluid {
+    margin: 0 280px 0 280px;
+}
+
+nav#scrollEffectNavbar {
+    padding: 70px 0 20px 0;
+}
+
+li.nav-item a {
+    margin-right: 70px;
+}
+
+a.navbar-brand {
+    margin-right: 190px;
+}
+
+section.container-fluid {
+    margin-top: 180px;
+    color: white;
+}

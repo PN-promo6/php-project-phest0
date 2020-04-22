@@ -1,0 +1,19 @@
+@media (max-device-width:767px) {
+
+    div.container-fluid {
+        margin: 0px;
+    }
+
+    section.container-fluid {
+        margin: 120px 0px 0px 0px;
+    }
+
+    nav#scrollEffectNavbar {
+        padding: 0px;
+    }
+
+    a.navbar-brand {
+        margin-right: 0px;
+    }
+
+}
