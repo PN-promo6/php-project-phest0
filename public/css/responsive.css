@@ -15,4 +15,16 @@
     a.navbar-brand {
         margin-right: 0px;
     }
+
+    li.nav-item.resp-btn {
+        padding: 10px 0 0 0px;
+    }
+
+    section.container {
+        margin-top: 120px;
+    }
+
+    ul.navbar-nav {
+        margin-left: 0;
+    }
 }

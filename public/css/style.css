@@ -44,3 +44,20 @@ section.container {
 h1 {
     margin-bottom: 40px;
 }
+
+div.card-body.description {
+    height: 410px;
+}
+
+img.card-img-top {
+    max-height: 261px;
+    min-height: 261px;
+}
+
+div.card-body {
+    background-color: #DFDEDA;
+}
+
+ul.navbar-nav {
+    margin-left: 40px;
+}

@@ -52,7 +52,9 @@ $setup1->id = 1;
 $setup1->title = "Setup gamer pro";
 $setup1->price = 2899;
 $setup1->creation_date_setup = date('d-m-Y');
-$setup1->description = "GTX 2080TI, I9-9900K";
+$setup1->description = "<ul><li>Intel Core i5-9600KF (3.7 GHz)</li><li>MSI MPG Z390 GAMING PLUS, DDR4 G.Skill Ripjaws V Gris - 16 Go (2 x 8 Go) 
+3200 MHz - CAS 16</li><li>Be Quiet! Pure Rock</li><li>Seagate BarraCuda 1 To</li><li>Gigabyte GeForce RTX 2060 SUPER WINDFORCE OC 8G</li><li>Samsung Série 860 QVO 1 To</li>
+<li>Cooler Master MasterBox MB511 RGB - Noir</li><li>Corsair VS650 v2 - 650W</li>";
 $setup1->url_photo_setup = "https://i.ibb.co/QNct4fH/1.jpg";
 $setup1->user = $user1;
 
@@ -120,6 +122,7 @@ $items = array($setup1, $setup2, $setup3, $setup4, $setup5, $setup6);
 </head>
 
 <body>
+
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar" id="scrollEffectNavbar">
         <div class="container-fluid">
@@ -151,18 +154,11 @@ $items = array($setup1, $setup2, $setup3, $setup4, $setup5, $setup6);
 
                 <!-- Right -->
                 <ul class="navbar-nav nav-flex-icons row">
-
                     <div class="">
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-outline-dark mr-3">S'inscrire</button>
+                        <li class="nav-item resp-btn">
+                            <button type="button" class="btn btn-outline-success">Se connecter</button>
                         </li>
                     </div>
-                    <div class="">
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-success">Se connecter</button>
-                        </li>
-                    </div>
-
                 </ul>
 
             </div>
@@ -170,6 +166,7 @@ $items = array($setup1, $setup2, $setup3, $setup4, $setup5, $setup6);
         </div>
     </nav>
     <!-- Navbar -->
+
     <section class="container">
         <div class="row">
             <div class="col">
@@ -202,7 +199,7 @@ $items = array($setup1, $setup2, $setup3, $setup4, $setup5, $setup6);
                                         <p class="card-text"><i class="far fa-clock pr-2"></i><?php echo $item->creation_date_setup ?></p>
                                     </div>
                                     <div class="col-5">
-                                        <span class="btn btn-outline-primary"><?php echo $item->price . "€" ?></span>
+                                        <span class="btn btn-outline-dark"><?php echo $item->price . "€" ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -218,7 +215,7 @@ $items = array($setup1, $setup2, $setup3, $setup4, $setup5, $setup6);
                         </div>
 
                         <!-- Card content -->
-                        <div class="card-body">
+                        <div class="card-body description">
                             <p class="card-text"><?php echo $item->description ?></p>
                         </div>
 
