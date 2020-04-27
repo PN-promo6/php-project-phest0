@@ -8,15 +8,19 @@ body {
     font-family: 'RobotoMono-Regular';
 }
 
-#scrollEffectNavbar {
+.scrollEffectNavbar {
     position: fixed;
     /* Make it stick/fixed */
     top: 0;
     /* Stay on top */
     width: 100%;
     /* Full width */
-    transition: top 0.3s;
-    /* Transition effect when sliding down (and up) */
+
+}
+
+.banner.hide {
+    transition: transform 0.5s;
+    transform: translateY(-150px);
 }
 
 .container-fluid {
