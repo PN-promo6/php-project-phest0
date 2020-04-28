@@ -1,0 +1,49 @@
+[{
+        "id": 1,
+        "title": "Setup gamer pro",
+        "price": 2899,
+        "description": "<ul><li>Intel Core i5-9600KF (3.7 GHz)</li><li>MSI MPG Z390 GAMING PLUS, DDR4 G.Skill Ripjaws V Gris - 16 Go (2 x 8 Go) 3200 MHz - CAS 16</li><li>Be Quiet! Pure Rock</li><li>Seagate BarraCuda 1 To</li><li>Gigabyte GeForce RTX 2060 SUPER WINDFORCE OC 8G</li><li>Samsung Série 860 QVO 1 To</li>",
+        "url_photo_setup": "https://i.ibb.co/QNct4fH/1.jpg",
+        "user": 1
+    },
+    {
+        "id": 2,
+        "title": "Setup gamer 2020",
+        "price": 1520,
+        "description": "GTX 2070, i7 7700k",
+        "url_photo_setup": "https://i.ibb.co/gFPPv02/2.jpg",
+        "user": 2
+    },
+    {
+        "id": 3,
+        "title": "Setup gamer 2020",
+        "price": 1280,
+        "description": "AMD Ryzen 5 3600 (3.6 GHz), Asus TUF B450 PLUS GAMING, Asus GeForce RTX 2070 DUAL O8G EVO",
+        "url_photo_setup": "https://i.ibb.co/sgMmMfq/3.jpg",
+        "user": 3
+    },
+    {
+        "id": 4,
+        "title": "Setup 800 euros",
+        "price": 789,
+        "description": "Processeur Intel i3-9100F, Carte mère Asus B365-Plus, RAM Corsair Vengeance LPX 2x8Go 2666MHz, EVGA GTX 1660 SC Ultra Gaming 6GB",
+        "url_photo_setup": "https://i.ibb.co/xh7wyXx/4.jpg",
+        "user": 4
+    },
+    {
+        "id": 5,
+        "title": "Setup 500 euros",
+        "price": 489,
+        "description": "Ryzen 3 3200G, Asus PRIME B450, 2x8 Corsair 3000 Mhz, GTX 1650 SUPER ASUS TUF",
+        "url_photo_setup": "https://i.ibb.co/7RNyC6s/5.jpg",
+        "user": 5
+    },
+    {
+        "id": 6,
+        "title": "Setup 700 euros",
+        "price": 679,
+        "description": "MSI A320M-A PRO MAX, Sapphire Radeon RX 580 PULSE, Cooler Master MasterBox Q300L, AMD Ryzen 5 3600",
+        "url_photo_setup": "https://i.ibb.co/VBM7SV7/6.jpg",
+        "user": 6
+    }
+]

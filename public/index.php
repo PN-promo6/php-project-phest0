@@ -1,109 +1,13 @@
 <?php
 
-require '../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 use Entity\Setup;
-use Entity\User;
+use ludk\Persistence\ORM;
 
-$user1 = new User();
-$user1->id = 1;
-$user1->nickname = "Phesto";
-$user1->password = "fjfjfkl";
-$user1->mail = "phesto@salut.fr";
-$user1->profil_url_image = "https://randomuser.me/api/portraits/women/81.jpg";
-
-$user2 = new User();
-$user2->id = 2;
-$user2->nickname = "Giacomo";
-$user2->password = "klgjgo";
-$user2->mail = "giac@salut.fr";
-$user2->profil_url_image = "https://randomuser.me/api/portraits/men/38.jpg";
-
-$user3 = new User();
-$user3->id = 3;
-$user3->nickname = "cotonZ";
-$user3->password = "cotonZ";
-$user3->mail = "ael@salut.fr";
-$user3->profil_url_image = "https://randomuser.me/api/portraits/women/8.jpg";
-
-$user4 = new User();
-$user4->id = 4;
-$user4->nickname = "jusDeGroXkimi77";
-$user4->password = "coton";
-$user4->mail = "jus@salut.fr";
-$user4->profil_url_image = "https://randomuser.me/api/portraits/lego/6.jpg";
-
-$user5 = new User();
-$user5->id = 5;
-$user5->nickname = "tajai";
-$user5->password = "okok";
-$user5->mail = "taj@salut.fr";
-$user5->profil_url_image = "https://randomuser.me/api/portraits/men/76.jpg";
-
-$user6 = new User();
-$user6->id = 6;
-$user6->nickname = "roibab";
-$user6->password = "roi";
-$user6->mail = "bab@salut.fr";
-$user6->profil_url_image = "https://randomuser.me/api/portraits/men/92.jpg";
-
-$setup1 = new Setup();
-$setup1->id = 1;
-$setup1->title = "Setup gamer pro";
-$setup1->price = 2899;
-$setup1->creation_date_setup = date('d-m-Y');
-$setup1->description = "<ul><li>Intel Core i5-9600KF (3.7 GHz)</li><li>MSI MPG Z390 GAMING PLUS, DDR4 G.Skill Ripjaws V Gris - 16 Go (2 x 8 Go) 
-3200 MHz - CAS 16</li><li>Be Quiet! Pure Rock</li><li>Seagate BarraCuda 1 To</li><li>Gigabyte GeForce RTX 2060 SUPER WINDFORCE OC 8G</li><li>Samsung Série 860 QVO 1 To</li>
-<li>Cooler Master MasterBox MB511 RGB - Noir</li><li>Corsair VS650 v2 - 650W</li>";
-$setup1->url_photo_setup = "https://i.ibb.co/QNct4fH/1.jpg";
-$setup1->user = $user1;
-
-$setup2 = new Setup();
-$setup2->id = 2;
-$setup2->title = "Setup gamer 2020";
-$setup2->price = 1520;
-$setup2->creation_date_setup = date('d-m-Y');
-$setup2->description = "GTX 2070, i7 7700k";
-$setup2->url_photo_setup = "https://i.ibb.co/gFPPv02/2.jpg";
-$setup2->user = $user2;
-
-$setup3 = new Setup();
-$setup3->id = 3;
-$setup3->title = "Setup gamer 2020";
-$setup3->price = 1280;
-$setup3->creation_date_setup = date('d-m-Y');
-$setup3->description = "AMD Ryzen 5 3600 (3.6 GHz), Asus TUF B450 PLUS GAMING, Asus GeForce RTX 2070 DUAL O8G EVO";
-$setup3->url_photo_setup = "https://i.ibb.co/sgMmMfq/3.jpg";
-$setup3->user = $user3;
-
-$setup4 = new Setup();
-$setup4->id = 4;
-$setup4->title = "Setup 800 euros";
-$setup4->price = 789;
-$setup4->creation_date_setup = date('d-m-Y');
-$setup4->description = "Processeur Intel i3-9100F, Carte mère Asus B365-Plus, RAM Corsair Vengeance LPX 2x8Go 2666MHz, EVGA GTX 1660 SC Ultra Gaming 6GB";
-$setup4->url_photo_setup = "https://i.ibb.co/xh7wyXx/4.jpg";
-$setup4->user = $user4;
-
-$setup5 = new Setup();
-$setup5->id = 5;
-$setup5->title = "Setup 500 euros";
-$setup5->price = 489;
-$setup5->creation_date_setup = date('d-m-Y');
-$setup5->description = "Ryzen 3 3200G, Asus PRIME B450, 2x8 Corsair 3000 Mhz, GTX 1650 SUPER ASUS TUF";
-$setup5->url_photo_setup = "https://i.ibb.co/7RNyC6s/5.jpg";
-$setup5->user = $user5;
-
-$setup6 = new Setup();
-$setup6->id = 6;
-$setup6->title = "Setup 700 euros";
-$setup6->price = 679;
-$setup6->creation_date_setup = date('d-m-Y');
-$setup6->description = "MSI A320M-A PRO MAX, Sapphire Radeon RX 580 PULSE, Cooler Master MasterBox Q300L, AMD Ryzen 5 3600";
-$setup6->url_photo_setup = "https://i.ibb.co/VBM7SV7/6.jpg";
-$setup6->user = $user6;
-
-$items = array($setup1, $setup2, $setup3, $setup4, $setup5, $setup6);
+$orm = new ORM(__DIR__ . '/../Resources');
+$setupRepo = $orm->getRepository(Setup::class);
+$items = $setupRepo->findAll();
 ?>
 
 <!doctype html>
@@ -151,6 +55,10 @@ $items = array($setup1, $setup2, $setup3, $setup4, $setup5, $setup6);
                     </li>
 
                 </ul>
+                <form class="form-inline my-2 my-lg-0" action="search" method="get">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Rechercher">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
+                </form>
 
                 <!-- Right -->
                 <ul class="navbar-nav nav-flex-icons row">
@@ -195,9 +103,6 @@ $items = array($setup1, $setup2, $setup3, $setup4, $setup5, $setup6);
                                 <div class="row">
                                     <!-- Subtitle -->
 
-                                    <div class="col-7">
-                                        <p class="card-text"><i class="far fa-clock pr-2"></i><?php echo $item->creation_date_setup ?></p>
-                                    </div>
                                     <div class="col-5">
                                         <span class="btn btn-outline-dark"><?php echo $item->price . "€" ?></span>
                                     </div>

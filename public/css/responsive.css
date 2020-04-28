@@ -27,4 +27,10 @@
     ul.navbar-nav {
         margin-left: 0;
     }
+
+    button.btn-secondary {
+        display: block;
+        width: 100%;
+    }
+
 }

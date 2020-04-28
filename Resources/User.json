@@ -1,0 +1,43 @@
+[{
+        "id": 1,
+        "nickname": "Phesto",
+        "password": "fjfjfkl",
+        "mail": "phesto@salut.fr",
+        "profil_url_image": "https://randomuser.me/api/portraits/women/81.jpg"
+    },
+    {
+        "id": 2,
+        "nickname": "Giacomo",
+        "password": "klgjgo",
+        "mail": "giac@salut.fr",
+        "profil_url_image": "https://randomuser.me/api/portraits/men/38.jpg"
+    },
+    {
+        "id": 3,
+        "nickname": "cotonZ",
+        "password": "cotonZ",
+        "mail": "ael@salut.fr",
+        "profil_url_image": "https://randomuser.me/api/portraits/women/8.jpg"
+    },
+    {
+        "id": 4,
+        "nickname": "jusDeGroXkimi77",
+        "password": "coton",
+        "mail": "jus@salut.fr",
+        "profil_url_image": "https://randomuser.me/api/portraits/lego/6.jpg"
+    },
+    {
+        "id": 5,
+        "nickname": "tajai",
+        "password": "okok",
+        "mail": "taj@salut.fr",
+        "profil_url_image": "https://randomuser.me/api/portraits/men/76.jpg"
+    },
+    {
+        "id": 6,
+        "nickname": "roibab",
+        "password": "roi",
+        "mail": "bab@salut.fr",
+        "profil_url_image": "https://randomuser.me/api/portraits/men/92.jpg"
+    }
+]
