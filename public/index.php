@@ -2,142 +2,77 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+session_start();
+// session_reset();
+
 use Entity\Setup;
+use Entity\User;
 use ludk\Persistence\ORM;
 
 $orm = new ORM(__DIR__ . '/../Resources');
 $setupRepo = $orm->getRepository(Setup::class);
-$items = $setupRepo->findAll();
-?>
 
-<!doctype html>
-<html lang="en">
+// $manager = $orm->getManager();
+// $item = $setupRepo->find(1);
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+// $item->title = "nouveau titre";
+// $manager->persist($item);
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <title>Ma Config.io</title>
-</head>
+// $newSetup = new Setup();
+// $newSetup->title = "Nouveau titre 2 !!!!";
+// $newSetup->user = $item->user;
+// $newSetup->price = "300";
+// $newSetup->description = "C'est juste un test";
+// $newSetup->url_photo_setup = "https://i.ibb.co/QNct4fH/1.jpg";
+// $manager->persist($newSetup);
+// $manager->flush();
 
-<body>
-
-    <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar banner" id="scrollEffectNavbar">
-        <div class="container-fluid">
-
-            <!-- Brand -->
-            <a class="navbar-brand waves-effect" href="" target="_blank">
-                <strong class="blue-text">Ma Config.io</strong>
-            </a>
-
-            <!-- Collapse -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Links -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <!-- Left -->
-                <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item active">
-                        <a class="nav-link waves-effect" href="" target="_blank">Trouver une config</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link waves-effect" href="" target="_blank">Partager sa config</a>
-                    </li>
-
-                </ul>
-                <form class="form-inline my-2 my-lg-0" action="search" method="get">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Rechercher">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
-                </form>
-
-                <!-- Right -->
-                <ul class="navbar-nav nav-flex-icons row">
-                    <div class="">
-                        <li class="nav-item resp-btn">
-                            <button type="button" class="btn btn-outline-success">Se connecter</button>
-                        </li>
-                    </div>
-                </ul>
-
-            </div>
-
-        </div>
-    </nav>
-    <!-- Navbar -->
-
-    <section class="container">
-        <div class="row">
-            <div class="col">
-                <h1>Choisir son setup</h1>
-            </div>
-        </div>
-
-        <div class="row">
-
-            <?php foreach ($items as $item) { ?>
-                <div class="col-lg-4 mb-5">
-                    <!-- Card -->
-                    <div class="card">
-
-                        <!-- Card content -->
-                        <div class="card-body d-flex flex-row">
-
-                            <!-- Avatar -->
-                            <img src="<?php echo $item->user->profil_url_image ?>" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
-
-                            <!-- Content -->
-                            <div>
-
-                                <!-- Title -->
-                                <h4 class="card-title font-weight-bold mb-2"><?php echo $item->title ?></h4>
-                                <div class="row">
-                                    <!-- Subtitle -->
-
-                                    <div class="col-5">
-                                        <span class="btn btn-outline-dark"><?php echo $item->price . "€" ?></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Card image -->
-                        <div class="view overlay">
-                            <img class="card-img-top rounded-0" src="<?php echo $item->url_photo_setup ?>" alt="Card image cap">
-                            <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <!-- Card content -->
-                        <div class="card-body description">
-                            <p class="card-text"><?php echo $item->description ?></p>
-                        </div>
-
-                    </div>
-                    <!-- Card -->
-                </div>
-            <?php } ?>
-        </div>
-        </div>
-    </section>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
-</body>
-
-</html>
+$action = $_GET["action"] ?? "display";
+switch ($action) {
+    case 'register':
+        break;
+    case 'logout':
+        if (isset($_SESSION['userId'])) {
+            unset($_SESSION['userId']);
+        }
+        header('Location: ?action=display');
+        break;
+    case 'login':
+        if (isset($_POST['username']) && isset($_POST['password'])) {
+            $userRepo = $orm->getRepository(User::class);
+            $userId = $userRepo->findBy(array("nickname" => $_POST['username'], "password" => $_POST['password']));
+            if (count($userId) > 0) {
+                $_SESSION['userId'] = $userId[0]->id;
+                header('Location: ?action=display');
+            } else {
+                $errorMsg = "Wrong login and/or password.";
+                include "../templates/login.php";
+            }
+        } else {
+            include "../templates/login.php";
+        }
+        break;
+    case 'new':
+        break;
+    case 'display':
+    default:
+        $items = $setupRepo->findAll();
+        if (isset($_GET['search'])) {
+            $search = $_GET['search'];
+            if (strpos($search, "@") === 0) {
+                $userRepo = $orm->getRepository(User::class);
+                $nickname = substr($search, 1);
+                $users = $userRepo->findBy(array("nickname" => $nickname));
+                if (count($users) == 1) {
+                    $user = $users[0];
+                    $items = $setupRepo->findBy(array("user" => $user->id));
+                }
+            } else {
+                $items = $setupRepo->findBy(array("description" => $search));
+            }
+        } else {
+            $items = $setupRepo->findAll();
+        }
+        include "../templates/display.php";
+        break;
+}

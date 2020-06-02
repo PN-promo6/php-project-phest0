@@ -65,3 +65,7 @@ div.card-body {
 ul.navbar-nav {
     margin-left: 40px;
 }
+
+div.container.log {
+    margin-top: 15rem;
+}

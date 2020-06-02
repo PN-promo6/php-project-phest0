@@ -7,11 +7,11 @@ use ludk\Utils\Serializer;
 
 class Setup
 {
-    public $id;
-    public $title;
-    public $price;
-    public $description;
-    public $url_photo_setup;
+    public int $id;
+    public string $title;
+    public string $price;
+    public string $description;
+    public string $url_photo_setup;
     public User $user;
 
     use Serializer;
