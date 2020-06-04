@@ -11,8 +11,8 @@ use ludk\Persistence\ORM;
 
 $orm = new ORM(__DIR__ . '/../Resources');
 $setupRepo = $orm->getRepository(Setup::class);
-
-// $manager = $orm->getManager();
+$userRepo = $orm->getRepository(User::class);
+$manager = $orm->getManager();
 // $item = $setupRepo->find(1);
 
 // $item->title = "nouveau titre";
@@ -30,19 +30,47 @@ $setupRepo = $orm->getRepository(Setup::class);
 $action = $_GET["action"] ?? "display";
 switch ($action) {
     case 'register':
+        if (isset($_POST['mail']) && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['passwordRetype'])) {
+            $userPseudo = $userRepo->findBy(array("nickname" => $_POST['username']));
+            $userMail = $userRepo->findBy(array("mail" => $_POST['mail']));
+            if (count($userPseudo) > 0 || count($userMail) > 0) {
+                $errorMsg = "Username or mail is already pick, please use another Username/Mail !";
+                include "../templates/register.php";
+            } elseif ($_POST['password'] != $_POST['passwordRetype']) {
+                $errorMsg = "Password retype is not similar than your first password";
+                include "../templates/register.php";
+            } elseif (strlen(trim($_POST['username'])) <= 4) {
+                $errorMsg = "Username should have at least 4 characters";
+                include "../templates/register.php";
+            } elseif (strlen(trim($_POST['password'])) <= 8) {
+                $errorMsg = "Password should have at least 8 characters";
+                include "../templates/register.php";
+            } elseif (count($userPseudo) == 0 && count($userMail) == 0) {
+                $newUser = new User();
+                $newUser->nickname = trim($_POST['username']);
+                $newUser->mail = trim($_POST['mail']);
+                $newUser->password = trim($_POST['password']);
+                $manager->persist($newUser);
+                $manager->flush();
+                header('Location: /?action=display');
+            }
+        } else {
+            include "../templates/register.php";
+        }
         break;
+
     case 'logout':
-        if (isset($_SESSION['userId'])) {
-            unset($_SESSION['userId']);
+        if (isset($_SESSION['user'])) {
+            unset($_SESSION['user']);
         }
         header('Location: ?action=display');
         break;
+
     case 'login':
         if (isset($_POST['username']) && isset($_POST['password'])) {
-            $userRepo = $orm->getRepository(User::class);
             $userId = $userRepo->findBy(array("nickname" => $_POST['username'], "password" => $_POST['password']));
             if (count($userId) > 0) {
-                $_SESSION['userId'] = $userId[0]->id;
+                $_SESSION['user'] = $userId[0];
                 header('Location: ?action=display');
             } else {
                 $errorMsg = "Wrong login and/or password.";
@@ -52,8 +80,35 @@ switch ($action) {
             include "../templates/login.php";
         }
         break;
+
     case 'new':
+        if (isset($_SESSION['user'])) {
+            if (isset($_POST['title']) && isset($_POST['price']) && isset($_POST['description']) && isset($_POST['url_photo_setup'])) {
+                if (strlen($_POST['title']) > 20) {
+                    $errorMsg = "Title should have maximum 20 characters";
+                    include "../templates/addConfig.php";
+                } elseif (strlen($_POST['price']) > 8) {
+                    $errorMsg = "Price should have maximum 8 characters";
+                    include "../templates/addConfig.php";
+                } else {
+                    $newSetup = new Setup();
+                    $newSetup->title = $_POST['title'];
+                    $newSetup->user = $_SESSION['user'];
+                    $newSetup->price = $_POST['price'];
+                    $newSetup->description = $_POST['description'];
+                    $newSetup->url_photo_setup = $_POST['url_photo_setup'];
+                    $manager->persist($newSetup);
+                    $manager->flush();
+                    header('Location: ?action=display');
+                }
+            } else {
+                include "../templates/addConfig.php";
+            }
+        } else {
+            header('Location: /?action=login');
+        }
         break;
+
     case 'display':
     default:
         $items = $setupRepo->findAll();
