@@ -5,6 +5,7 @@
     <!-- Navbar -->
     <?php include '../templates/inc/navbar.php'; ?>
     <!-- Navbar -->
+
     <section class="container">
         <form method="POST" action="?action=new">
             <div class="form-group">
@@ -25,6 +26,7 @@
             </div>
         </form>
     </section>
+
     <!-- footer -->
     <?php include '../templates/inc/footer.php'; ?>
     <!-- footer -->
