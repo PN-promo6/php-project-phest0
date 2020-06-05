@@ -1,9 +1,9 @@
     <!-- head -->
-    <?php include '../templates/inc/head.php'; ?>
+    {% include 'inc/head.php' %}
     <!-- head -->
 
     <!-- Navbar -->
-    <?php include '../templates/inc/navbar.php'; ?>
+    {% include 'inc/navbar.php' %}
     <!-- Navbar -->
 
     <div class="container log">
@@ -26,5 +26,5 @@
     </div>
 
     <!-- footer -->
-    <?php include '../templates/inc/footer.php'; ?>
+    {% include 'inc/footer.php' %}
     <!-- footer -->
