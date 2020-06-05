@@ -23,9 +23,9 @@
                     <a class="nav-link waves-effect" href="/">Trouver une config</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect <?php if ($_SERVER['REQUEST_URI'] === '/?action=new') {
+                    <a class="nav-link waves-effect <?php if ($_SERVER['REQUEST_URI'] === '/new') {
                                                         echo "active";
-                                                    } ?>" href="/?action=new">Partager sa config</a>
+                                                    } ?>" href="/new">Partager sa config</a>
                 </li>
 
             </ul>
@@ -40,16 +40,16 @@
                 if (isset($_SESSION['user'])) {
                 ?>
                     <li class="nav-item">
-                        <a class="nav-link text-danger" href="/?action=logout" role="button">Logout</a>
+                        <a class="nav-link text-danger" href="/logout" role="button">Logout</a>
                     </li>
                 <?php
                 } else {
                 ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="/?action=login" role="button">Login</a>
+                        <a class="nav-link" href="/login" role="button">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-success" href="/?action=register" role="button">Sign Up</a>
+                        <a class="nav-link text-success" href="/register" role="button">Sign Up</a>
                     </li>
                 <?php
                 }

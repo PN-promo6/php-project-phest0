@@ -7,7 +7,7 @@
     <!-- Navbar -->
 
     <section class="container">
-        <form method="POST" action="?action=new">
+        <form method="POST" action="/new">
             <div class="form-group">
                 <?php
                 if (isset($errorMsg)) {

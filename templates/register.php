@@ -9,7 +9,7 @@
     <div class="container log">
         <div class="row">
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-                <form class="form-signin" method="POST" action="/?action=register">
+                <form class="form-signin" method="POST" action="/register">
                     <?php
                     if (isset($errorMsg)) {
                         echo "<div class='alert alert-warning' role='alert'>$errorMsg</div>";

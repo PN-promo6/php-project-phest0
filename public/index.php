@@ -2,8 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-// session_start();
-session_reset();
+session_start();
 
 use Controller\AuthController;
 use Controller\HomeController;
@@ -30,7 +29,8 @@ $manager = $orm->getManager();
 // $manager->persist($newSetup);
 // $manager->flush();
 
-$action = $_GET["action"] ?? "display";
+$action = substr(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), 1);
+
 switch ($action) {
     case 'register':
         $AuthController = new AuthController();

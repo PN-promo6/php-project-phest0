@@ -26,13 +26,13 @@ class SetupController
                     $newSetup->url_photo_setup = $_POST['url_photo_setup'];
                     $manager->persist($newSetup);
                     $manager->flush();
-                    header('Location: ?action=display');
+                    header('Location: /display');
                 }
             } else {
                 include "../templates/addConfig.php";
             }
         } else {
-            header('Location: /?action=login');
+            header('Location: /login');
         }
     }
 }
